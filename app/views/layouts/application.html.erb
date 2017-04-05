@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsReactToy</title>
+    <title>
+      <% if @title %>
+        <%= @title %>
+      <% else %>
+        RailsReactToy
+      <% end %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
