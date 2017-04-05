@@ -1,0 +1,7 @@
+<h3>All Users</h3>
+<% @users.each do |user| %>
+  Name: <%= user.first_name %> <%= user.last_name %> (<a href="<%= request.original_url %>/<%= user.id %>">show profile</a>)<br />
+  Email: <%= user.email %><br />
+  Role: <%= user.role %><br />
+  <hr />
+<% end %>
