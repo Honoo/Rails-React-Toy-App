@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic app that demonstrates Rails and React code.
 
-Things you may want to cover:
+## Setup
+1. Clone the repository
+2. `bundle install`
+3. `rake db:setup`
+4. `bin/rails s`. The app is at `localhost:3000`.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features
+* User profiles
+* Signup and login
+* Admin roles and access restriction
+* Unit tests (using RSpec)
