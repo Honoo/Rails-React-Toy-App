@@ -6,7 +6,14 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def authorize
+  def require_login
     redirect_to '/login' unless current_user
+  end
+
+  # Use this with require_login
+  def require_admin
+    if current_user.role != 'Admin'
+      render :text => 'Not Found', :status => '404'
+    end
   end
 end

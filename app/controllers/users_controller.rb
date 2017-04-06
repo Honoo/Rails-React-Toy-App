@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :require_login
+  before_action :require_admin, only: [:index]
+
   def index
     @title = "Users"
     @users = User.all
