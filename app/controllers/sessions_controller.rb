@@ -2,6 +2,7 @@
 
 class SessionsController < ApplicationController
   def new
+    @title = "Login"
     render :new
   end
 

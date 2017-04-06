@@ -11,12 +11,18 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @title = "User " + params[:id].to_s
-    render :show
+    current_user = get_current_user()
+    if current_user.id == params[:id].to_i || current_user.role.name == "Admin"
+      @user = User.find(params[:id])
+      @title = "User " + params[:id]
+      render :show
+    else
+      render :text => 'Not Found', :status => '404'
+    end
   end
 
   def new
+    @title = "Signup"
     render :new
   end
 
