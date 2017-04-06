@@ -16,6 +16,6 @@ class User < ApplicationRecord
   belongs_to :role
   has_secure_password
 
-  validates :email, :password, presence: true
+  validates :email, :password, :role_id, presence: true
   validates :password, length: { minimum: 6 }
 end
