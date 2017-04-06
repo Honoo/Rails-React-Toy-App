@@ -1,3 +1,5 @@
+# Controller for logins.
+
 class SessionsController < ApplicationController
   def new
     render :new
