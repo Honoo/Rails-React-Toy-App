@@ -1,5 +1,18 @@
 <h3>User Profile</h3>
-First Name: <%= react_component('UserField', { item: @user.first_name }) %><br />
-Last Name:  <%= react_component('UserField', { item: @user.last_name }) %><br />
-Email: <%= react_component('UserField', { item: @user.email }) %><br />
+<p>Click on the field to edit it.</p>
+First Name: <%= react_component('UserField', 
+                                { item: @user.first_name,
+                                  user_id: @user.id,
+                                  field: "first_name" }) 
+            %><br />
+Last Name:  <%= react_component('UserField', 
+                                { item: @user.last_name,
+                                  user_id: @user.id,
+                                  field: "last_name" }) 
+            %><br />
+Email: <%= react_component('UserField', 
+                            { item: @user.email,
+                              user_id: @user.id,
+                              field: "email" }) 
+        %><br />
 Role: <%= @user.role.name %><br />

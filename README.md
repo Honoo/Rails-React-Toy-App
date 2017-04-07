@@ -9,7 +9,7 @@ This is a basic app that demonstrates Rails and React code.
 4. `bin/rails s`. The app is at `localhost:3000`.
 
 ## Features
-* User profiles
+* User profiles with editable fields (using React)
 * Signup and login
 * Admin roles and access restriction
 * Unit tests (using RSpec)

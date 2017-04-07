@@ -37,6 +37,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    if params[:id]
+      user = User.find(params[:id])
+      if user.update_attributes!(user_params)
+        render :nothing => true, status: :ok
+      else
+        render :nothing => true, status: :bad_request
+      end
+    else
+      render :nothing => true, status: :bad_request
+    end
+  end
+
   private
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password)
